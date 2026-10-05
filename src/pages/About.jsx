@@ -24,7 +24,7 @@ function About() {
           </h2>
 
           <p>
-            At RIGID COASTAL, we provide dependable roofing solutions
+            At RCH COASTAL, we provide dependable roofing solutions
             designed to protect homes and buildings for years to come.
             Our focus is on quality workmanship, durable materials,
             and reliable service.

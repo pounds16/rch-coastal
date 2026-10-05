@@ -1,28 +1,22 @@
+/* =========================================================
+   GLOBAL BOX SIZING
+========================================================= */
 
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
 
-body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  min-width: 100%;
-  background-color: #ffffff;
-  color: #222;
-  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
-}
+/* =========================================================
+   ROOT APP
+========================================================= */
 
 #root {
-  width: 100%;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
+    width: 100%;
+    min-height: 100vh;
+
+    margin: 0;
+    padding: 0;
 }

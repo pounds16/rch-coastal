@@ -1,20 +1,27 @@
-/* HOME SECTION */
+/* ========================================
+   HOME SECTION
+======================================== */
 
 .home {
     position: relative;
 
     width: 100%;
-    height: 90vh;
+    min-height: 90vh;
+    min-height: 90svh;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
     overflow: hidden;
+
+    box-sizing: border-box;
 }
 
 
-/* BACKGROUND VIDEO */
+/* ========================================
+   BACKGROUND VIDEO
+======================================== */
 
 .home-video {
     position: absolute;
@@ -26,16 +33,17 @@
     height: 100%;
 
     object-fit: cover;
-
     object-position: center;
 
-    transform: scale(100%);
+    transform: scale(1);
 
     z-index: 0;
 }
 
 
-/* DARK OVERLAY */
+/* ========================================
+   DARK OVERLAY
+======================================== */
 
 .home-overlay {
     position: absolute;
@@ -52,12 +60,23 @@
 }
 
 
-/* HOME CONTENT */
+/* ========================================
+   HOME CONTENT
+======================================== */
 
 .home-content {
     position: relative;
 
     z-index: 2;
+
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 40px 30px;
+
+    box-sizing: border-box;
 
     display: flex;
     flex-direction: column;
@@ -68,69 +87,93 @@
     gap: 20px;
 
     text-align: center;
-
-    padding: 20px;
-
-    max-width: 1000px;
 }
 
 
-/* HEADING */
+/* ========================================
+   MAIN HEADING
+======================================== */
 
 .home-head {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0;
+
     text-align: center;
 
     color: rgb(255, 255, 255);
 
     font-family: 'Times New Roman', Times, serif;
 
-    font-size: 50px;
+    /*
+       Automatically adjusts between
+       small phones, tablets and desktops.
+    */
+    font-size: clamp(2rem, 5vw, 50px);
 
     font-weight: bold;
 
-    margin: 0;
-
     line-height: 1.1;
 
-    max-width: 900px;
+    overflow-wrap: break-word;
 
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    text-shadow:
+        2px 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 
-/* PARAGRAPH */
+/* ========================================
+   PARAGRAPH
+======================================== */
 
 .home-p {
+    width: 100%;
+    max-width: 600px;
+
+    margin: 0 0 15px 0;
+
+    padding: 0 10px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
     color: rgb(169, 198, 198);
 
-    font-family: 'Gill Sans',
+    font-family:
+        'Gill Sans',
         'Gill Sans MT',
         Calibri,
         'Trebuchet MS',
         sans-serif;
 
-    font-size: 1.3rem;
+    /*
+       Responsive font size.
+    */
+    font-size: clamp(1rem, 2vw, 1.3rem);
 
     font-style: italic;
 
-    margin: 0 0 15px 0;
-
-    max-width: 600px;
-
-    text-align: center;
-
     line-height: 1.6;
 
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+    overflow-wrap: break-word;
+
+    text-shadow:
+        1px 1px 5px rgba(0, 0, 0, 0.7);
 }
 
 
-/* FREE QUOTE LINK */
+/* ========================================
+   FREE QUOTE LINK
+======================================== */
 
 .home-a {
+    display: inline-block;
+
     color: white;
 
-    font-size: 18px;
+    font-size: clamp(15px, 1.5vw, 18px);
 
     font-weight: 500;
 
@@ -140,11 +183,22 @@
 
     padding-bottom: 5px;
 
-    transition: all 0.3s ease;
+    transition:
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+
+    /*
+       Prevents the link from becoming
+       too small on touch screens.
+    */
+    min-height: 24px;
 }
 
 
-/* Hover effect */
+/* ========================================
+   HOVER EFFECT
+======================================== */
 
 .home-a:hover {
     transform: translateY(-5px);
@@ -155,33 +209,72 @@
 }
 
 
-/* TABLET / MOBILE */
+/* ========================================
+   TABLETS
+   769px - 1024px
+======================================== */
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 
     .home {
-        height: 85vh;
+        min-height: 85vh;
+        min-height: 85svh;
     }
 
 
     .home-content {
-        padding: 20px;
+        max-width: 900px;
+
+        padding: 35px 25px;
     }
 
 
     .home-head {
-        font-size: 35px;
+        max-width: 800px;
 
-        line-height: 1.15;
-
-        max-width: 95%;
+        font-size: clamp(2.2rem, 5vw, 42px);
     }
 
 
     .home-p {
-        font-size: 16px;
+        max-width: 550px;
+    }
+}
 
+
+/* ========================================
+   TABLETS / SMALL LAPTOPS
+   769px and below
+======================================== */
+
+@media (max-width: 768px) {
+
+    .home {
+        min-height: 85vh;
+        min-height: 85svh;
+    }
+
+
+    .home-content {
+        padding: 30px 20px;
+
+        gap: 18px;
+    }
+
+
+    .home-head {
+        max-width: 95%;
+
+        font-size: clamp(2rem, 7vw, 35px);
+
+        line-height: 1.15;
+    }
+
+
+    .home-p {
         max-width: 90%;
+
+        font-size: 16px;
 
         line-height: 1.5;
     }
@@ -193,30 +286,133 @@
 }
 
 
-/* SMALL PHONES */
+/* ========================================
+   MOBILE PHONES
+   480px and below
+======================================== */
 
 @media (max-width: 480px) {
 
     .home {
-        height: 80vh;
+        min-height: 80vh;
+        min-height: 80svh;
+    }
+
+
+    .home-content {
+        padding: 25px 15px;
+
+        gap: 16px;
     }
 
 
     .home-head {
-        font-size: 28px;
+        width: 100%;
 
-        line-height: 1.2;
+        max-width: 100%;
+
+        font-size: clamp(1.8rem, 9vw, 30px);
+
+        line-height: 1.15;
     }
 
 
     .home-p {
+        width: 100%;
+
+        max-width: 100%;
+
+        padding: 0 5px;
+
         font-size: 15px;
 
-        max-width: 95%;
+        line-height: 1.5;
     }
 
 
     .home-a {
         font-size: 15px;
+
+        padding-bottom: 4px;
+    }
+}
+
+
+/* ========================================
+   VERY SMALL PHONES
+   360px and below
+======================================== */
+
+@media (max-width: 360px) {
+
+    .home {
+        min-height: 78vh;
+        min-height: 78svh;
+    }
+
+
+    .home-content {
+        padding: 20px 10px;
+
+        gap: 14px;
+    }
+
+
+    .home-head {
+        font-size: 25px;
+
+        line-height: 1.15;
+    }
+
+
+    .home-p {
+        font-size: 14px;
+
+        line-height: 1.45;
+    }
+
+
+    .home-a {
+        font-size: 14px;
+    }
+}
+
+
+/* ========================================
+   LANDSCAPE PHONES
+======================================== */
+
+@media (max-height: 500px) and (orientation: landscape) {
+
+    .home {
+        min-height: 100svh;
+    }
+
+
+    .home-content {
+        padding: 20px;
+
+        gap: 12px;
+    }
+
+
+    .home-head {
+        font-size: clamp(1.8rem, 6vw, 32px);
+
+        line-height: 1.1;
+    }
+
+
+    .home-p {
+        font-size: 14px;
+
+        line-height: 1.4;
+
+        margin-bottom: 5px;
+    }
+
+
+    .home-a {
+        font-size: 14px;
     }
 }

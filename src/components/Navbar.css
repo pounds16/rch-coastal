@@ -1,4 +1,6 @@
-/* NAVBAR */
+/* ========================================
+   NAVBAR
+======================================== */
 
 .navbar {
     width: 100%;
@@ -14,12 +16,21 @@
 
     position: relative;
     z-index: 1000;
+
+    box-sizing: border-box;
 }
 
 
-/* LOGO */
+/* ========================================
+   LOGO
+======================================== */
 
 .logo {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
     color: rgb(11, 222, 208);
 
     font-size: 24px;
@@ -32,39 +43,42 @@
     transition: color 0.3s ease;
 }
 
+
 .logo:hover {
     color: rgb(251, 247, 255);
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  
-}
 
-.logo img {
-  width: 55px;
-  height: 55px;
-  object-fit: contain;
-  
-}
+/* LOGO IMAGE */
 
 .logo-image {
-  width: 60px;
-  height: 60px;
-  border-radius: 100%;
-  object-fit: cover;
+    width: 60px;
+    height: 60px;
+
+    min-width: 60px;
+    min-height: 60px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    display: block;
 }
+
+
+/* LOGO TEXT */
 
 .logo span {
-  font-size: 18px;
-  font-weight: bold;
+    font-size: 18px;
+    font-weight: bold;
+
+    line-height: 1.2;
 }
 
 
-/* NAV LINKS */
+/* ========================================
+   NAVIGATION LINKS
+======================================== */
 
 .nav-links {
     display: flex;
@@ -87,7 +101,9 @@
     font-size: 16px;
     font-weight: 500;
 
-    transition: color 0.3s ease;
+    transition:
+        color 0.3s ease,
+        background-color 0.3s ease;
 }
 
 
@@ -96,69 +112,129 @@
 }
 
 
-/* HAMBURGER BUTTON */
+/* ========================================
+   HAMBURGER BUTTON
+======================================== */
 
 .menu-button {
     display: none;
+
     background: transparent;
-    border-color: rgb(11, 222, 208);
-    border-radius: 10px;
+
+    border: 1px solid rgb(11, 222, 208);
+
+    border-radius: 8px;
+
     cursor: pointer;
+
     padding: 5px;
+
+    flex-shrink: 0;
 }
 
 
 .menu-button span {
     display: block;
+
     width: 28px;
     height: 3px;
+
     margin: 5px 0;
+
     background-color: white;
+
     border-radius: 5px;
+
     transition: 0.3s;
 }
 
 
-/* TABLETS */
+/* ========================================
+   LARGE TABLETS / SMALL LAPTOPS
+======================================== */
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
 
     .navbar {
         padding: 0 4%;
     }
 
+
     .nav-links {
-        gap: 20px;
+        gap: 22px;
     }
+
 
     .nav-links a {
         font-size: 15px;
     }
 
-    .logo {
-        font-size: 22px;
+
+    .logo span {
+        font-size: 17px;
     }
 }
 
 
-/* MOBILE */
+/* ========================================
+   TABLETS
+======================================== */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        min-height: 70px;
+
+        padding: 0 4%;
+    }
+
+
+    .logo-image {
+        width: 55px;
+        height: 55px;
+
+        min-width: 55px;
+        min-height: 55px;
+    }
+
+
+    .logo span {
+        font-size: 16px;
+    }
+
+
+    .nav-links {
+        gap: 15px;
+    }
+
+
+    .nav-links a {
+        font-size: 14px;
+    }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
 
 @media (max-width: 768px) {
 
     .navbar {
         min-height: 70px;
-        padding: 0 25px;
+
+        padding: 0 20px;
     }
 
 
-    /* Show hamburger */
+    /* SHOW HAMBURGER */
 
     .menu-button {
         display: block;
     }
 
 
-    /* Hide menu by default */
+    /* MOBILE MENU */
 
     .nav-links {
         position: absolute;
@@ -166,11 +242,11 @@
         top: 70px;
         right: 0;
 
-        width: 15%;
+        width: 100%;
 
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
 
         gap: 0;
 
@@ -182,18 +258,22 @@
 
         overflow: hidden;
 
-        transition: max-height 0.4s ease;
+        transition:
+            max-height 0.4s ease,
+            padding 0.4s ease;
     }
 
 
-    /* Open menu */
+    /* OPEN MOBILE MENU */
 
     .nav-links.active {
         max-height: 400px;
 
-        padding: 0px 20;
+        padding: 10px 0;
     }
 
+
+    /* MENU ITEMS */
 
     .nav-links li {
         width: 100%;
@@ -207,7 +287,9 @@
 
         width: 100%;
 
-        padding: 12px 0;
+        box-sizing: border-box;
+
+        padding: 14px 20px;
 
         font-size: 16px;
     }
@@ -218,25 +300,72 @@
     }
 
 
+    /* MOBILE LOGO */
+
     .logo {
-        font-size: 21px;
+        gap: 8px;
+
+        max-width: calc(100% - 55px);
+    }
+
+
+    .logo span {
+        font-size: 17px;
+
+        white-space: normal;
+
+        line-height: 1.15;
+    }
+
+
+    .logo-image {
+        width: 50px;
+        height: 50px;
+
+        min-width: 50px;
+        min-height: 50px;
     }
 }
 
 
-/* SMALL PHONES */
+/* ========================================
+   SMALL PHONES
+======================================== */
 
 @media (max-width: 480px) {
 
     .navbar {
         min-height: 65px;
 
-        padding: 0 18px;
+        padding: 0 15px;
     }
 
 
     .logo {
-        font-size: 19px;
+        gap: 7px;
+
+        max-width: calc(100% - 50px);
+    }
+
+
+    .logo-image {
+        width: 45px;
+        height: 45px;
+
+        min-width: 45px;
+        min-height: 45px;
+    }
+
+
+    .logo span {
+        font-size: 14px;
+
+        line-height: 1.15;
+    }
+
+
+    .menu-button {
+        padding: 4px;
     }
 
 
@@ -253,9 +382,97 @@
     }
 
 
+    .nav-links.active {
+        max-height: 400px;
+
+        padding: 8px 0;
+    }
+
+
     .nav-links a {
-        padding: 13px 0;
+        padding: 13px 15px;
 
         font-size: 15px;
+    }
+}
+
+
+/* ========================================
+   VERY SMALL PHONES
+======================================== */
+
+@media (max-width: 360px) {
+
+    .navbar {
+        padding: 0 10px;
+    }
+
+
+    .logo {
+        gap: 6px;
+
+        max-width: calc(100% - 45px);
+    }
+
+
+    .logo-image {
+        width: 40px;
+        height: 40px;
+
+        min-width: 40px;
+        min-height: 40px;
+    }
+
+
+    .logo span {
+        font-size: 12px;
+    }
+
+
+    .menu-button span {
+        width: 23px;
+        height: 2px;
+
+        margin: 4px 0;
+    }
+}
+
+
+/* ========================================
+   LANDSCAPE PHONES
+======================================== */
+
+@media (max-height: 500px) and (orientation: landscape) {
+
+    .navbar {
+        min-height: 60px;
+
+        padding: 0 20px;
+    }
+
+
+    .logo-image {
+        width: 45px;
+        height: 45px;
+
+        min-width: 45px;
+        min-height: 45px;
+    }
+
+
+    .nav-links {
+        top: 60px;
+    }
+
+
+    .nav-links.active {
+        max-height: 300px;
+
+        overflow-y: auto;
+    }
+
+
+    .nav-links a {
+        padding: 9px 15px;
     }
 }

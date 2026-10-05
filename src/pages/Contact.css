@@ -1,28 +1,44 @@
-/* =========================
+/* ========================================
    CONTACT SECTION
-========================= */
+======================================== */
 
 .contact {
+    width: 100%;
     min-height: 100vh;
 
     padding: 90px 8%;
 
     background-color: #f5f5f5;
+
+    box-sizing: border-box;
 }
 
+
+/* ========================================
+   EMAIL LINK
+======================================== */
 
 .email-link {
     color: inherit;
+
     text-decoration: none;
+
     cursor: pointer;
+
     transition: color 0.3s ease;
 }
 
+
 .email-link:hover {
     color: rgb(59, 182, 43);
+
     text-decoration: underline;
 }
 
+
+/* ========================================
+   PHONE LINK
+======================================== */
 
 .phone-link {
     display: block;
@@ -38,6 +54,7 @@
     transition: color 0.3s ease;
 }
 
+
 .phone-link:hover {
     color: rgb(59, 182, 43);
 
@@ -45,68 +62,92 @@
 }
 
 
-/* =========================
-   HEADING
-========================= */
+/* ========================================
+   CONTACT HEADING
+======================================== */
 
 .contact-heading {
+    width: 100%;
     max-width: 750px;
 
     margin: 0 auto 60px;
 
     text-align: center;
+
+    box-sizing: border-box;
 }
 
+
 .contact-heading span {
+    display: inline-block;
+
     color: #14ba4e;
 
     font-size: 13px;
+
     font-weight: bold;
 
     letter-spacing: 3px;
 }
+
 
 .contact-heading h1 {
     margin: 15px 0 20px;
 
     color: #222;
 
-    font-size: 45px;
+    font-size: clamp(2rem, 4vw, 45px);
+
     line-height: 1.15;
+
+    overflow-wrap: break-word;
 }
 
+
 .contact-heading p {
+    margin: 0;
+
     color: #666;
 
     font-size: 17px;
+
     line-height: 1.7;
+
+    overflow-wrap: break-word;
 }
 
 
-/* =========================
+/* ========================================
    CONTACT CONTAINER
-========================= */
+======================================== */
 
 .contact-container {
+    width: 100%;
     max-width: 1200px;
 
-    margin: auto;
+    margin: 0 auto;
 
     display: grid;
 
-    grid-template-columns: 0.8fr 1.2fr;
+    grid-template-columns:
+        minmax(0, 0.8fr)
+        minmax(0, 1.2fr);
 
     gap: 50px;
 
     align-items: start;
+
+    box-sizing: border-box;
 }
 
 
-/* =========================
+/* ========================================
    CONTACT INFORMATION
-========================= */
+======================================== */
 
 .contact-info {
+    width: 100%;
+
     background-color: rgb(44, 44, 115);
 
     padding: 40px;
@@ -114,42 +155,60 @@
     border-radius: 15px;
 
     color: white;
+
+    box-sizing: border-box;
 }
 
+
 .contact-info h2 {
+    margin: 0 0 15px;
+
     color: white;
 
     font-size: 28px;
 
-    margin-bottom: 15px;
+    line-height: 1.2;
 }
 
+
 .contact-info > p {
+    margin: 0 0 35px;
+
     color: #d8d8e5;
 
     line-height: 1.7;
 
-    margin-bottom: 35px;
+    font-size: 15px;
 }
 
 
-/* =========================
+/* ========================================
    CONTACT ITEMS
-========================= */
+======================================== */
 
 .contact-item {
+    width: 100%;
+
     display: flex;
 
-    align-items: center;
+    align-items: flex-start;
 
     gap: 18px;
 
     margin-bottom: 25px;
+
+    box-sizing: border-box;
 }
+
+
+/* CONTACT ICON */
 
 .contact-icon {
     width: 45px;
     height: 45px;
+
+    min-width: 45px;
+    min-height: 45px;
 
     display: flex;
 
@@ -163,44 +222,85 @@
     font-size: 20px;
 }
 
+
+/* CONTACT TEXT */
+
+.contact-item > div:last-child {
+    min-width: 0;
+
+    flex: 1;
+}
+
+
 .contact-item h3 {
     margin: 0 0 4px;
-    margin-right: 35vh;
+
     color: white;
-    
+
     font-size: 16px;
+
+    line-height: 1.3;
 }
 
 
 .contact-item p {
     margin: 0;
-   
+
     color: #d8d8e5;
 
     font-size: 14px;
+
+    line-height: 1.6;
+
+    overflow-wrap: break-word;
 }
 
 
-/* =========================
+/* PHONE AND EMAIL LINKS */
+
+.contact-item .phone-link,
+.contact-item .email-link {
+    color: #d8d8e5;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    overflow-wrap: anywhere;
+}
+
+
+.contact-item .phone-link:hover,
+.contact-item .email-link:hover {
+    color: #14ba4e;
+}
+
+
+/* ========================================
    CONTACT NOTE
-========================= */
+======================================== */
 
 .contact-note {
     margin-top: 35px;
 
     padding-top: 25px;
 
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-top:
+        1px solid rgba(255, 255, 255, 0.2);
 }
+
 
 .contact-note strong {
     color: #0edd57;
 
     font-size: 16px;
+
+    line-height: 1.4;
 }
 
+
 .contact-note p {
-    margin-top: 8px;
+    margin: 8px 0 0;
 
     color: #d8d8e5;
 
@@ -210,53 +310,72 @@
 }
 
 
-/* =========================
-   FORM
-========================= */
+/* ========================================
+   CONTACT FORM
+======================================== */
 
 .contact-form {
+    width: 100%;
+
     background-color: white;
 
     padding: 40px;
 
     border-radius: 15px;
 
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08);
+
+    box-sizing: border-box;
 }
 
+
 .contact-form h2 {
+    margin: 0 0 30px;
+
     color: #222;
 
     font-size: 28px;
 
-    margin-bottom: 30px;
+    line-height: 1.2;
 }
 
 
-/* =========================
+/* ========================================
    FORM ROW
-========================= */
+======================================== */
 
 .form-row {
+    width: 100%;
+
     display: grid;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
 
     gap: 20px;
+
+    box-sizing: border-box;
 }
 
 
-/* =========================
+/* ========================================
    FORM GROUP
-========================= */
+======================================== */
 
 .form-group {
+    width: 100%;
+
     display: flex;
 
     flex-direction: column;
 
     margin-bottom: 20px;
+
+    box-sizing: border-box;
 }
+
 
 .form-group label {
     margin-bottom: 8px;
@@ -266,13 +385,21 @@
     font-size: 14px;
 
     font-weight: 600;
+
+    line-height: 1.4;
 }
+
+
+/* ========================================
+   FORM INPUTS
+======================================== */
 
 .form-group input,
 .form-group select,
 .form-group textarea {
-
     width: 100%;
+
+    max-width: 100%;
 
     padding: 14px 15px;
 
@@ -290,44 +417,66 @@
 
     outline: none;
 
-    transition: border-color 0.3s ease,
-                box-shadow 0.3s ease;
+    box-sizing: border-box;
 
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
 }
+
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-
     border-color: #14ba4e;
 
-    box-shadow: 0 0 0 3px rgba(20, 186, 78, 0.1);
-
+    box-shadow:
+        0 0 0 3px rgba(20, 186, 78, 0.1);
 }
+
+
+/* TEXTAREA */
 
 .form-group textarea {
     resize: vertical;
 
     min-height: 140px;
+
+    line-height: 1.5;
 }
+
+
+/* ========================================
+   SUCCESS MESSAGE
+======================================== */
 
 .success-message {
-  margin-top: 20px;
-  padding: 15px;
-  background: #e8f8ee;
-  color: #16803c;
-  border-radius: 8px;
-  font-weight: 600;
+    margin-top: 20px;
+
+    padding: 15px;
+
+    background: #e8f8ee;
+
+    color: #16803c;
+
+    border-radius: 8px;
+
+    font-weight: 600;
+
+    line-height: 1.5;
+
+    box-sizing: border-box;
 }
 
 
-/* =========================
-   BUTTON
-========================= */
+/* ========================================
+   SUBMIT BUTTON
+======================================== */
 
 .contact-form button {
-
     width: 100%;
+
+    min-height: 50px;
 
     padding: 15px;
 
@@ -345,27 +494,72 @@
 
     cursor: pointer;
 
-    transition: background-color 0.3s ease,
-                transform 0.3s ease;
+    box-sizing: border-box;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
 }
 
-.contact-form button:hover {
 
+.contact-form button:hover {
     background-color: #0f963e;
 
     transform: translateY(-2px);
 }
 
 
-/* =========================
-   TABLET
-========================= */
+/* ========================================
+   BUTTON DISABLED
+======================================== */
+
+.contact-form button:disabled {
+    background-color: #a8a8a8;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* ========================================
+   LARGE TABLETS / SMALL LAPTOPS
+======================================== */
+
+@media (max-width: 1100px) {
+
+    .contact {
+        padding: 80px 6%;
+    }
+
+
+    .contact-container {
+        gap: 35px;
+    }
+
+
+    .contact-info,
+    .contact-form {
+        padding: 35px;
+    }
+}
+
+
+/* ========================================
+   TABLETS
+======================================== */
 
 @media (max-width: 900px) {
 
     .contact {
-        padding: 75px 5%;
+        padding: 70px 5%;
     }
+
+
+    /*
+       Stack contact information
+       and form vertically.
+    */
 
     .contact-container {
         grid-template-columns: 1fr;
@@ -373,12 +567,17 @@
         gap: 30px;
     }
 
+
+    .contact-info,
+    .contact-form {
+        width: 100%;
+    }
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/* ========================================
+   SMALL TABLETS
+======================================== */
 
 @media (max-width: 768px) {
 
@@ -386,18 +585,49 @@
         padding: 60px 20px;
     }
 
-    .contact-heading h1 {
-        font-size: 35px;
+
+    .contact-heading {
+        margin-bottom: 45px;
     }
+
+
+    .contact-heading span {
+        font-size: 12px;
+
+        letter-spacing: 2.5px;
+    }
+
+
+    .contact-heading h1 {
+        font-size: clamp(2rem, 7vw, 35px);
+
+        margin: 12px 0 18px;
+    }
+
 
     .contact-heading p {
         font-size: 16px;
+
+        line-height: 1.6;
     }
+
 
     .contact-info,
     .contact-form {
         padding: 30px 25px;
     }
+
+
+    .contact-info h2,
+    .contact-form h2 {
+        font-size: 25px;
+    }
+
+
+    /*
+       Form fields become
+       one column.
+    */
 
     .form-row {
         grid-template-columns: 1fr;
@@ -405,12 +635,16 @@
         gap: 0;
     }
 
+
+    .contact-item {
+        gap: 15px;
+    }
 }
 
 
-/* =========================
-   SMALL PHONES
-========================= */
+/* ========================================
+   MOBILE PHONES
+======================================== */
 
 @media (max-width: 480px) {
 
@@ -418,18 +652,241 @@
         padding: 50px 15px;
     }
 
-    .contact-heading h1 {
-        font-size: 30px;
+
+    .contact-heading {
+        margin-bottom: 35px;
     }
+
+
+    .contact-heading span {
+        font-size: 11px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .contact-heading h1 {
+        font-size: clamp(1.8rem, 9vw, 30px);
+
+        line-height: 1.15;
+    }
+
+
+    .contact-heading p {
+        font-size: 15px;
+
+        line-height: 1.6;
+    }
+
 
     .contact-info,
     .contact-form {
         padding: 25px 20px;
+
+        border-radius: 12px;
     }
+
 
     .contact-info h2,
     .contact-form h2 {
-        font-size: 24px;
+        font-size: 23px;
     }
 
+
+    .contact-info > p {
+        font-size: 14px;
+
+        line-height: 1.6;
+
+        margin-bottom: 28px;
+    }
+
+
+    .contact-item {
+        gap: 12px;
+
+        margin-bottom: 22px;
+    }
+
+
+    .contact-icon {
+        width: 40px;
+        height: 40px;
+
+        min-width: 40px;
+        min-height: 40px;
+
+        font-size: 18px;
+    }
+
+
+    .contact-item h3 {
+        font-size: 15px;
+    }
+
+
+    .contact-item p,
+    .contact-item .phone-link,
+    .contact-item .email-link {
+        font-size: 13px;
+
+        line-height: 1.5;
+    }
+
+
+    .contact-note {
+        margin-top: 30px;
+
+        padding-top: 20px;
+    }
+
+
+    .contact-note strong {
+        font-size: 15px;
+    }
+
+
+    .contact-note p {
+        font-size: 13px;
+    }
+
+
+    .contact-form h2 {
+        margin-bottom: 25px;
+    }
+
+
+    .form-group {
+        margin-bottom: 17px;
+    }
+
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 13px 12px;
+
+        font-size: 14px;
+    }
+
+
+    .form-group textarea {
+        min-height: 120px;
+    }
+
+
+    .contact-form button {
+        padding: 14px;
+
+        font-size: 15px;
+    }
+}
+
+
+/* ========================================
+   VERY SMALL PHONES
+======================================== */
+
+@media (max-width: 360px) {
+
+    .contact {
+        padding: 45px 10px;
+    }
+
+
+    .contact-info,
+    .contact-form {
+        padding: 22px 15px;
+    }
+
+
+    .contact-heading h1 {
+        font-size: 26px;
+    }
+
+
+    .contact-heading p {
+        font-size: 14px;
+    }
+
+
+    .contact-info h2,
+    .contact-form h2 {
+        font-size: 21px;
+    }
+
+
+    .contact-item {
+        gap: 10px;
+    }
+
+
+    .contact-icon {
+        width: 36px;
+        height: 36px;
+
+        min-width: 36px;
+        min-height: 36px;
+
+        font-size: 16px;
+    }
+
+
+    .contact-item p,
+    .contact-item .phone-link,
+    .contact-item .email-link {
+        font-size: 12px;
+    }
+
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 13px;
+    }
+
+
+    .contact-form button {
+        font-size: 14px;
+    }
+}
+
+
+/* ========================================
+   LANDSCAPE PHONES
+======================================== */
+
+@media (max-height: 500px) and (orientation: landscape) {
+
+    .contact {
+        padding: 50px 25px;
+    }
+
+
+    .contact-heading {
+        margin-bottom: 35px;
+    }
+
+
+    .contact-heading h1 {
+        font-size: 30px;
+    }
+
+
+    .contact-heading p {
+        font-size: 14px;
+
+        line-height: 1.5;
+    }
+
+
+    .contact-info,
+    .contact-form {
+        padding: 25px;
+    }
+
+
+    .contact-form textarea {
+        min-height: 100px;
+    }
 }
