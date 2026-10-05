@@ -22,10 +22,13 @@
 
 .about-content {
     width: 100%;
-    max-width: 1200px; /* Limits maximum width for readability on large displays */
+    max-width: 1200px;
+
     margin: 0 auto;
+
     display: flex;
     flex-direction: column;
+
     box-sizing: border-box;
 }
 
@@ -281,28 +284,22 @@
         padding: 70px 5%;
     }
 
-
     .about-content {
         gap: 35px;
     }
-
 
     .about-text h2 {
         font-size: clamp(30px, 4.5vw, 40px);
     }
 
-
     .about-text > p {
         font-size: 16px;
-
         line-height: 1.7;
     }
-
 
     .about-image img {
         height: 420px;
     }
-
 
     .feature-card img {
         height: 220px;
@@ -326,23 +323,15 @@
         gap: 50px;
     }
 
-
-}
-
-
     .about-text h2 {
         font-size: clamp(30px, 6vw, 40px);
     }
 
-
     .about-image {
         width: 100%;
-
         max-width: 850px;
-
         margin: 0 auto;
     }
-
 
     .about-image img {
         height: clamp(350px, 55vw, 450px);
@@ -361,55 +350,41 @@
         padding: 60px 25px;
     }
 
-
     .about-content {
         gap: 40px;
     }
 
-
     .about-label {
         font-size: 12px;
-
         letter-spacing: 2.5px;
     }
 
-
     .about-text h2 {
         font-size: clamp(29px, 7vw, 36px);
-
         margin: 12px 0 22px;
     }
 
-
     .about-text > p {
         font-size: 16px;
-
         line-height: 1.7;
     }
 
-
     .about-features {
         grid-template-columns: 1fr;
-
         gap: 18px;
-
         margin-top: 30px;
     }
-
 
     .feature-column {
         gap: 18px;
     }
 
-
     .feature-card img {
         height: clamp(200px, 40vw, 260px);
     }
 
-
     .about-image img {
         height: clamp(300px, 55vw, 400px);
-
         border-radius: 12px;
     }
 
@@ -426,73 +401,56 @@
         padding: 55px 18px;
     }
 
-
     .about-content {
         gap: 35px;
     }
 
-
     .about-label {
         font-size: 10px;
-
         letter-spacing: 2px;
     }
 
-
     .about-text h2 {
         font-size: clamp(27px, 9vw, 32px);
-
         margin: 12px 0 20px;
     }
 
-
     .about-text > p {
         font-size: 15px;
-
         line-height: 1.65;
     }
 
-
     .about-features {
         gap: 15px;
-
         margin-top: 25px;
     }
-
 
     .feature-column {
         gap: 15px;
     }
 
-
     .feature-card {
         border-radius: 15px;
     }
-
 
     .feature-card img {
         height: 200px;
     }
 
-
     .feature-content {
         padding: 16px;
     }
-
 
     .feature-content h3 {
         font-size: 17px;
     }
 
-
     .feature-content p {
         font-size: 13px;
     }
 
-
     .about-image img {
         height: 300px;
-
         border-radius: 12px;
     }
 
@@ -509,43 +467,34 @@
         padding: 45px 14px;
     }
 
-
     .about-text h2 {
         font-size: 26px;
     }
-
 
     .about-text > p {
         font-size: 14px;
     }
 
-
     .about-label {
         font-size: 9px;
-
         letter-spacing: 1.8px;
     }
-
 
     .feature-card img {
         height: 170px;
     }
 
-
     .feature-content {
         padding: 14px;
     }
-
 
     .feature-content h3 {
         font-size: 16px;
     }
 
-
     .feature-content p {
         font-size: 12px;
     }
-
 
     .about-image img {
         height: 260px;
@@ -564,28 +513,22 @@
         padding: 50px 25px;
     }
 
-
     .about-content {
         gap: 35px;
     }
-
 
     .about-text h2 {
         font-size: 30px;
     }
 
-
     .about-text > p {
         font-size: 14px;
-
         line-height: 1.5;
     }
-
 
     .feature-card img {
         height: 180px;
     }
-
 
     .about-image img {
         height: 300px;
@@ -603,7 +546,6 @@
     .feature-card {
         transition: none;
     }
-
 
     .feature-card:hover {
         transform: none;
