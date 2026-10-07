@@ -36,14 +36,14 @@ function Home() {
         </h1>
 
         <p className="home-p">
-          Building strong, reliable and lasting solutions for your project.
+          Building strong, reliable and lasting solutions for your roofing project.
         </p>
 
         <Link
           to="/contact#quote-form"
           className="home-a"
         >
-          Get a Free Quote
+          Get a Free Roofing Quote
         </Link>
 
       </div>
