@@ -1,14 +1,23 @@
 import './Services.css'
 
+import SEO from '../components/SEO'
+
 function Services() {
   return (
     <section id="services" className="services">
+
+     <SEO
+        title="Roofing Services in Ghana | RCH Coastal Construction & Engineering"
+        description="Explore RCH Coastal's roof installation, roof repair, and roof maintenance services for homes and buildings in Ghana."
+        path="/services"
+     />
     <h2>Our Roofing Services</h2>
       <p>
-       From new roof installations to repairs and
-       ongoing maintenance, we provide dependable
-       roofing solutions designed to protect your
-       home and keep your roof in excellent condition.
+        From new roof installations to repairs and
+        ongoing maintenance, we provide dependable
+        roofing solutions for homes and buildings in
+        Ghana, designed to protect your property and
+        keep your roof in excellent condition.
       </p>
 
     <div className="service-container">

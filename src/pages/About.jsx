@@ -1,5 +1,7 @@
 import './About.css'
 
+import SEO from '../components/SEO'
+
 import WorkmanshipImage from '../assets/workman.jpeg'
 import DurableroofingImage from '../assets/durable1.jpg'
 import ReliableserviceImage from '../assets/workman3.jpeg'
@@ -8,6 +10,12 @@ import commitmentImage from '../assets/commitment.jpg'
 function About() {
   return (
     <section className="about">
+
+      <SEO
+        title="About RCH Coastal | Roofing & Construction Company in Ghana"
+        description="Learn about RCH Coastal Construction & Engineering and our commitment to quality workmanship, durable materials, and reliable roofing services in Ghana."
+        path="/about"
+      />
 
       <div className="about-content">
 
@@ -119,7 +127,7 @@ function About() {
 
                 <img
                   src={commitmentImage}
-                  alt="ROOFMASTER roofing team"
+                  alt="RCH Coastal roofing team"
                 />
 
                 <div className="feature-content">

@@ -6,9 +6,17 @@ import project4 from '../assets/project4.jpg'
 import project5 from '../assets/project5.png'
 import project6 from '../assets/project6.png'
 
+import SEO from '../components/SEO'
+
 function Projects() {
   return (
     <section className="projects">
+
+      <SEO
+        title="Roofing Projects in Ghana | RCH Coastal Construction & Engineering"
+        description="View completed roofing projects by RCH Coastal Construction & Engineering, including residential, commercial, installation, repair, and maintenance work."
+        path="/projects"
+      />
 
       <div className="projects-heading">
         <span>OUR PROJECTS</span>
@@ -40,7 +48,7 @@ function Projects() {
 
 
         <div className="project-card">
-          <img src={project2} alt="Roof installation project" />
+          <img src={project2} alt="New roof installation project" />
 
           <div className="project-info">
             <span>ROOF INSTALLATION</span>
@@ -84,7 +92,7 @@ function Projects() {
 
 
         <div className="project-card">
-          <img src={project6} alt="Completed roofing project" />
+          <img src={project6} alt="Completed residential roofing project" />
 
           <div className="project-info">
             <span>RESIDENTIAL</span>

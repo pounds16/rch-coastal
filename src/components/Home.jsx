@@ -4,10 +4,18 @@ import constructionVideo from '../assets/construction.mp4'
 
 import { Link } from 'react-router-dom'
 
+import SEO from './SEO'
+
 function Home() {
 
   return (
     <section className="home">
+
+      <SEO
+        title="Roofing Company in Ghana | RCH Coastal Construction & Engineering"
+        description="RCH Coastal Construction & Engineering provides professional roofing installation, roof repair, maintenance, and construction services in Ghana."
+        path="/"
+      />
 
       {/* Background video */}
       <video
@@ -36,7 +44,7 @@ function Home() {
         </h1>
 
         <p className="home-p">
-          Building strong, reliable and lasting solutions for your roofing project.
+          Professional roofing and construction solutions designed to protect homes and buildings across Ghana.
         </p>
 
         <Link

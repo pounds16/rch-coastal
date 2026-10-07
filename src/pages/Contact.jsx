@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import emailjs from '@emailjs/browser'
 
+import SEO from '../components/SEO'
+
 function Contact() {
 
     const location = useLocation()
@@ -101,6 +103,12 @@ function Contact() {
   return (
 
     <section className="contact" >
+
+      <SEO
+        title="Contact RCH Coastal | Roofing Company in Ghana"
+        description="Contact RCH Coastal Construction & Engineering for roofing installation, repair, maintenance, restoration, and free roofing quotes in Ghana."
+        path="/contact"
+      />
 
       <div className="contact-heading">
         <span>GET IN TOUCH</span>
