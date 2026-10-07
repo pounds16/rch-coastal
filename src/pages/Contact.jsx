@@ -196,7 +196,7 @@ function Contact() {
             <div>
               <h3>Location</h3>
               <p>TEMA TDC</p>
-              <p>KOFORIDUA</p>
+              <p>KOFORIDUA PENSEC JUNCTION OFF NYAMEKROM ROAD</p>
             </div>
           </div>
 
