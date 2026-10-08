@@ -184,7 +184,7 @@ function Contact() {
                   href="mailto:rigidcoastalhubcompanygh@gmail.com"
                   className="email-link"
                 >
-                  rigidcoastalhubcompanygh@gmail.com
+                  rchcoastal5@gmail.com
               </a>
             </div>
           </div>

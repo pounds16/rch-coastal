@@ -5,6 +5,9 @@ import project3 from '../assets/project3.png'
 import project4 from '../assets/project4.jpg'
 import project5 from '../assets/project5.png'
 import project6 from '../assets/project6.png'
+import project7 from '../assets/project7.jpg'
+import project8 from '../assets/project8.jpg'
+import project9 from '../assets/project9.jpg'
 
 import SEO from '../components/SEO'
 
@@ -98,6 +101,36 @@ function Projects() {
             <span>RESIDENTIAL</span>
             <h3>Complete Roofing Solution</h3>
             <p>A finished roofing project focused on quality and detail.</p>
+          </div>
+        </div>
+
+        <div className="project-card">
+          <img src={project7} alt="Heavy-Duty Commercial Steel Trusses" />
+
+          <div className="project-info">
+            <span>Commercial Steel Trusses</span>
+            <h3>Large-Scale Structural Steel Trusses</h3>
+            <p>Industrial-grade structural steel truss installation for large auditoriums and commercial structures.</p>
+          </div>
+        </div>
+
+        <div className="project-card">
+          <img src={project8} alt="Residential Stone-Coated Tile Roof Installation" />
+
+          <div className="project-info">
+            <span>Precision Residential Roof Installation</span>
+            <h3>Premium Stone-Coated Tile Roofing</h3>
+            <p>Skilled craftsman completing a durable, weather-resistant stone-coated tile roof.</p>
+          </div>
+        </div>
+
+         <div className="project-card">
+          <img src={project9} alt="Roofing Material Supply & On-Site Logistics" />
+
+          <div className="project-info">
+            <span>Quality Long-Span Sheet Installation</span>
+            <h3>On-Site Roofing Material Supply & Delivery</h3>
+            <p>Direct supply and professional offloading of premium long-span roofing sheets for a multi-story educational building.</p>
           </div>
         </div>
 
