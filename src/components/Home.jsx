@@ -24,6 +24,7 @@ function Home() {
         loop
         muted
         playsInline
+        poster="/construction-thumbnail.jpg"
       >
         <source src={constructionVideo} type="video/mp4" />
         Your browser does not support the video tag.
