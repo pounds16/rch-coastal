@@ -1,0 +1,754 @@
+
+/* =========================
+   PROJECT GALLERY
+========================= */
+
+.project-gallery {
+  width: 100%;
+  min-height: 100vh;
+  min-width: 0;
+  background: #f6f8f7;
+  color: #202923;
+  overflow-x: clip;
+  box-sizing: border-box;
+}
+
+.project-gallery *,
+.project-gallery *::before,
+.project-gallery *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.gallery-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 350px;
+  padding: 80px 7%;
+  overflow: hidden;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    rgba(10, 29, 24, 0.96),
+    rgba(17, 55, 42, 0.90)
+  );
+}
+
+.gallery-hero::before,
+.gallery-hero::after {
+  position: absolute;
+  content: "";
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.gallery-hero::before {
+  width: 420px;
+  height: 420px;
+  top: -230px;
+  left: -100px;
+}
+
+.gallery-hero::after {
+  width: 520px;
+  height: 520px;
+  right: -150px;
+  bottom: -360px;
+}
+
+.gallery-hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 850px;
+  min-width: 0;
+  margin: 0 auto;
+}
+
+.gallery-eyebrow {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: #75df9b;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.gallery-hero h1 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+  overflow-wrap: anywhere;
+}
+
+.gallery-title-line {
+  width: 75px;
+  height: 4px;
+  margin: 25px auto;
+  border-radius: 5px;
+  background: #35c46a;
+}
+
+.gallery-hero-content > p {
+  max-width: 650px;
+  margin: 0 auto;
+  color: #d3e2da;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  overflow-wrap: break-word;
+}
+
+
+/* =========================
+   HERO BUTTON
+========================= */
+
+.gallery-hero-button,
+.gallery-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  margin-top: 28px;
+  padding: 13px 26px;
+  border: 2px solid #35c46a;
+  border-radius: 5px;
+  background: #35c46a;
+  color: #102b1d;
+  font-size: 0.95rem;
+  font-weight: 750;
+  line-height: 1.4;
+  text-align: center;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.gallery-hero-button:hover,
+.gallery-cta-button:hover {
+  background: transparent;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+.gallery-hero-button:focus-visible,
+.gallery-cta-button:focus-visible {
+  outline: 3px solid #75df9b;
+  outline-offset: 4px;
+}
+
+
+/* =========================
+   GALLERY SECTION
+========================= */
+
+.gallery-section {
+  width: 100%;
+  min-width: 0;
+  padding: 75px 6% 100px;
+}
+
+.gallery-container {
+  width: 100%;
+  max-width: 1400px;
+  min-width: 0;
+  margin: 0 auto;
+}
+
+.gallery-section-heading {
+  max-width: 850px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.gallery-section-heading > .gallery-eyebrow {
+  margin-bottom: 12px;
+}
+
+.gallery-section-heading h2 {
+  margin: 0 0 14px;
+  color: #173b2b;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 800;
+  line-height: 1.3;
+  overflow-wrap: break-word;
+}
+
+.gallery-section-heading > p {
+  max-width: 650px;
+  margin: 0 auto;
+  color: #66716a;
+  font-size: 1rem;
+  line-height: 1.8;
+  overflow-wrap: break-word;
+}
+
+
+/* =========================
+   PROJECT COUNT
+========================= */
+
+.gallery-project-count {
+  display: inline-block;
+  max-width: 100%;
+  margin-top: 20px;
+  padding: 8px 16px;
+  border: 1px solid #d4e7d9;
+  border-radius: 30px;
+  background: #fff;
+  color: #267443;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+
+/* =========================
+   GALLERY CATEGORIES
+========================= */
+
+.gallery-category {
+  width: 100%;
+  min-width: 0;
+  margin-top: 55px;
+}
+
+.gallery-category-heading {
+  margin-bottom: 25px;
+}
+
+.gallery-category-heading h3 {
+  margin: 0 0 9px;
+  color: #173b2b;
+  font-size: clamp(1.45rem, 2.5vw, 1.9rem);
+  font-weight: 800;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.gallery-category-heading p {
+  margin: 0;
+  color: #66716a;
+  font-size: 0.97rem;
+  line-height: 1.8;
+}
+
+
+/* =========================
+   IMAGE AND VIDEO GRID
+========================= */
+
+.project-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 25px;
+  width: 100%;
+  min-width: 0;
+}
+
+.project-gallery-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  isolation: isolate;
+  border: 1px solid rgba(23, 59, 43, 0.08);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(18, 42, 29, 0.09);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+
+/* =========================
+   PROJECT PHOTOS
+========================= */
+
+.project-gallery-item > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+  background: #dfe5e0;
+  transition: transform 0.55s ease;
+}
+
+
+/* =========================
+   IMAGE OVERLAY
+========================= */
+
+.gallery-image-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 7px;
+  padding: 22px;
+  opacity: 0;
+  background: linear-gradient(
+    to top,
+    rgba(5, 24, 16, 0.88),
+    rgba(5, 24, 16, 0.18) 60%,
+    transparent
+  );
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+
+.gallery-item-number {
+  display: block;
+  color: #75df9b;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.gallery-image-overlay h4,
+.gallery-video-caption h4 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 750;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+
+/* =========================
+   IMAGE HOVER EFFECTS
+========================= */
+
+@media (hover: hover) and (pointer: fine) {
+  .project-gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 32px rgba(18, 42, 29, 0.17);
+  }
+
+  .project-gallery-item:hover > img {
+    transform: scale(1.05);
+  }
+
+  .project-gallery-item:hover .gallery-image-overlay {
+    opacity: 1;
+  }
+}
+
+
+/* =========================
+   VIDEO GALLERY
+========================= */
+
+.gallery-video-category {
+  margin-top: 65px;
+}
+
+.gallery-video-grid {
+  align-items: stretch;
+}
+
+.gallery-video-item {
+  height: 100%;
+  background: #fff;
+}
+
+/* Native video player */
+
+.gallery-video-item > video {
+  display: block;
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: #101613;
+}
+
+/* Video title area */
+
+.gallery-video-caption {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  flex: 1 0 auto;
+  min-width: 0;
+  min-height: 95px;
+  gap: 8px;
+  padding: 18px 20px;
+  background: #173b2b;
+}
+
+.gallery-video-caption .gallery-item-number {
+  font-size: 0.72rem;
+}
+
+.gallery-video-caption h4 {
+  font-size: 1rem;
+}
+
+/* Do not zoom or move video cards when users hover */
+
+@media (hover: hover) and (pointer: fine) {
+  .gallery-video-item:hover > video {
+    transform: none;
+  }
+}
+
+
+/* =========================
+   EMPTY GALLERY MESSAGE
+========================= */
+
+.gallery-empty {
+  width: 100%;
+  padding: 40px 25px;
+  border: 1px dashed #b8cbbd;
+  border-radius: 12px;
+  background: #fff;
+  color: #66716a;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.gallery-empty h3 {
+  margin: 0 0 12px;
+  color: #173b2b;
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+.gallery-empty p {
+  max-width: 650px;
+  margin: 0 auto;
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================
+   CALL TO ACTION
+========================= */
+
+.gallery-cta {
+  width: 100%;
+  padding: 75px 7%;
+  background: linear-gradient(
+    135deg,
+    #102e23,
+    #173b2b
+  );
+  text-align: center;
+}
+
+.gallery-cta-content {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.gallery-cta .gallery-eyebrow {
+  margin-bottom: 14px;
+}
+
+.gallery-cta h2 {
+  margin: 0 0 18px;
+  color: #fff;
+  font-size: clamp(1.9rem, 4vw, 2.7rem);
+  font-weight: 800;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.gallery-cta p {
+  max-width: 680px;
+  margin: 0 auto;
+  color: #d3e2da;
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+
+/* =========================
+   TABLETS AND SMALL LAPTOPS
+========================= */
+
+@media (max-width: 1000px) {
+  .gallery-section {
+    padding: 65px 5% 80px;
+  }
+
+  .project-gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .gallery-hero {
+    min-height: 320px;
+  }
+
+  .gallery-category {
+    margin-top: 45px;
+  }
+}
+
+
+/* =========================
+   SMALL TABLETS / LANDSCAPE PHONES
+========================= */
+
+@media (max-width: 768px) and (min-width: 601px) {
+  .gallery-section {
+    padding-right: 4%;
+    padding-left: 4%;
+  }
+
+  .project-gallery-grid {
+    gap: 16px;
+  }
+
+  .project-gallery-item {
+    border-radius: 10px;
+  }
+
+  .gallery-image-overlay {
+    padding: 16px;
+  }
+
+  .gallery-video-caption {
+    padding: 15px;
+  }
+}
+
+
+/* =========================
+   MOBILE PHONES
+========================= */
+
+@media (max-width: 600px) {
+  .gallery-hero {
+    min-height: 290px;
+    padding: 60px 6%;
+  }
+
+  .gallery-eyebrow {
+    margin-bottom: 14px;
+    font-size: 0.72rem;
+    letter-spacing: 3px;
+  }
+
+  .gallery-hero h1 {
+    font-size: clamp(2rem, 8vw, 3rem);
+    letter-spacing: -0.7px;
+  }
+
+  .gallery-title-line {
+    margin: 20px auto;
+  }
+
+  .gallery-hero-content > p {
+    font-size: 0.94rem;
+    line-height: 1.75;
+  }
+
+  .gallery-hero-button,
+  .gallery-cta-button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .gallery-section {
+    padding: 48px 5% 65px;
+  }
+
+  .gallery-section-heading {
+    margin-bottom: 30px;
+  }
+
+  .gallery-section-heading h2 {
+    font-size: clamp(1.6rem, 6vw, 2rem);
+  }
+
+  .gallery-section-heading > p {
+    font-size: 0.93rem;
+  }
+
+  .gallery-project-count {
+    font-size: 0.78rem;
+  }
+
+  .gallery-category,
+  .gallery-video-category {
+    margin-top: 40px;
+  }
+
+  .gallery-category-heading {
+    margin-bottom: 20px;
+  }
+
+  .gallery-category-heading h3 {
+    font-size: 1.45rem;
+  }
+
+  .gallery-category-heading p {
+    font-size: 0.9rem;
+  }
+
+  .project-gallery-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .project-gallery-item {
+    border-radius: 9px;
+  }
+
+  .project-gallery-item > img {
+    aspect-ratio: 4 / 3;
+  }
+
+  /* Keep photo titles visible on touchscreens */
+
+  .gallery-image-overlay {
+    padding: 16px;
+    opacity: 1;
+    background: linear-gradient(
+      to top,
+      rgba(5, 24, 16, 0.78),
+      rgba(5, 24, 16, 0.08) 65%,
+      transparent
+    );
+  }
+
+  .gallery-image-overlay h4 {
+    font-size: 1rem;
+  }
+
+  .gallery-image-overlay .gallery-item-number {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+  }
+
+  .gallery-video-item > video {
+    aspect-ratio: 16 / 9;
+  }
+
+  .gallery-video-caption {
+    min-height: 85px;
+    padding: 15px;
+  }
+
+  .gallery-video-caption h4 {
+    font-size: 0.98rem;
+  }
+
+  .gallery-empty {
+    padding: 30px 18px;
+  }
+
+  .gallery-cta {
+    padding: 55px 6%;
+  }
+
+  .gallery-cta p {
+    font-size: 0.94rem;
+    line-height: 1.8;
+  }
+}
+
+
+/* =========================
+   VERY SMALL PHONES
+========================= */
+
+@media (max-width: 360px) {
+  .gallery-hero {
+    padding: 50px 5%;
+  }
+
+  .gallery-eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+  }
+
+  .gallery-hero h1 {
+    font-size: 1.9rem;
+  }
+
+  .gallery-section {
+    padding-right: 4%;
+    padding-left: 4%;
+  }
+
+  .project-gallery-grid {
+    gap: 15px;
+  }
+
+  .gallery-image-overlay {
+    padding: 12px;
+  }
+
+  .gallery-video-caption {
+    padding: 13px;
+  }
+
+  .gallery-cta {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+}
+
+
+/* =========================
+   REDUCED MOTION ACCESSIBILITY
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .project-gallery-item,
+  .project-gallery-item > img,
+  .gallery-image-overlay,
+  .gallery-hero-button,
+  .gallery-cta-button {
+    transition: none;
+  }
+
+  .project-gallery-item:hover {
+    transform: none;
+  }
+
+  .project-gallery-item:hover > img {
+    transform: none;
+  }
+
+  .gallery-hero-button:hover,
+  .gallery-cta-button:hover {
+    transform: none;
+  }
+}

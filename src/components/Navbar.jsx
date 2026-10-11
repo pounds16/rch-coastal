@@ -54,6 +54,12 @@ function Navbar() {
         </li>
 
         <li>
+          <Link to="/projectgallery" onClick={closeMenu}>
+            Project Gallery
+          </Link>
+        </li>
+
+        <li>
           <Link to="/about" onClick={closeMenu}>
             About
           </Link>

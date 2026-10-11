@@ -13,11 +13,10 @@
     align-items: center;
     justify-content: center;
 
-    overflow: hidden;
-
     box-sizing: border-box;
+    overflow: hidden;
+    isolation: isolate;
 }
-
 
 /* ========================================
    BACKGROUND VIDEO
@@ -26,20 +25,22 @@
 .home-video {
     position: absolute;
 
-    top: 0;
-    left: 0;
+    inset: 0;
 
     width: 100%;
     height: 100%;
+
+    display: block;
 
     object-fit: cover;
     object-position: center;
 
     transform: scale(1);
 
-    z-index: 0;
-}
+    z-index: -2;
 
+    pointer-events: none;
+}
 
 /* ========================================
    DARK OVERLAY
@@ -48,17 +49,17 @@
 .home-overlay {
     position: absolute;
 
-    top: 0;
-    left: 0;
+    inset: 0;
 
     width: 100%;
     height: 100%;
 
     background: rgba(0, 0, 0, 0.55);
 
-    z-index: 1;
-}
+    z-index: -1;
 
+    pointer-events: none;
+}
 
 /* ========================================
    HOME CONTENT
@@ -67,10 +68,11 @@
 .home-content {
     position: relative;
 
-    z-index: 2;
+    z-index: 1;
 
     width: 100%;
     max-width: 1100px;
+    min-width: 0;
 
     margin: 0 auto;
 
@@ -89,7 +91,6 @@
     text-align: center;
 }
 
-
 /* ========================================
    MAIN HEADING
 ======================================== */
@@ -97,31 +98,28 @@
 .home-head {
     width: 100%;
     max-width: 900px;
+    min-width: 0;
 
     margin: 0;
 
     text-align: center;
 
-    color: rgb(255, 255, 255);
+    color: #ffffff;
 
     font-family: 'Times New Roman', Times, serif;
 
-    /*
-       Automatically adjusts between
-       small phones, tablets and desktops.
-    */
     font-size: clamp(2rem, 5vw, 50px);
 
-    font-weight: bold;
+    font-weight: 700;
 
     line-height: 1.1;
 
     overflow-wrap: break-word;
+    hyphens: auto;
 
     text-shadow:
         2px 2px 8px rgba(0, 0, 0, 0.6);
 }
-
 
 /* ========================================
    PARAGRAPH
@@ -130,8 +128,9 @@
 .home-p {
     width: 100%;
     max-width: 600px;
+    min-width: 0;
 
-    margin: 0 0 15px 0;
+    margin: 0 0 15px;
 
     padding: 0 10px;
 
@@ -148,9 +147,6 @@
         'Trebuchet MS',
         sans-serif;
 
-    /*
-       Responsive font size.
-    */
     font-size: clamp(1rem, 2vw, 1.3rem);
 
     font-style: italic;
@@ -163,64 +159,97 @@
         1px 1px 5px rgba(0, 0, 0, 0.7);
 }
 
-
 /* ========================================
    FREE QUOTE LINK
 ======================================== */
 
 .home-a {
-    display: inline-block;
+    display: inline-flex;
 
-    color: white;
+    align-items: center;
+    justify-content: center;
+
+    max-width: 100%;
+    min-height: 44px;
+
+    padding: 8px 2px;
+
+    box-sizing: border-box;
+
+    color: #ffffff;
 
     font-size: clamp(15px, 1.5vw, 18px);
 
-    font-weight: 500;
+    font-weight: 600;
 
+    text-align: center;
     text-decoration: none;
 
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid #ffffff;
 
-    padding-bottom: 5px;
+    overflow-wrap: break-word;
 
     transition:
         color 0.3s ease,
         border-color 0.3s ease,
         transform 0.3s ease;
-
-    /*
-       Prevents the link from becoming
-       too small on touch screens.
-    */
-    min-height: 24px;
 }
-
 
 /* ========================================
    HOVER EFFECT
 ======================================== */
 
-.home-a:hover {
-    transform: translateY(-5px);
+@media (hover: hover) and (pointer: fine) {
+    .home-a:hover {
+        transform: translateY(-3px);
 
-    color: rgb(59, 182, 43);
+        color: rgb(59, 182, 43);
 
-    border-bottom-color: rgb(59, 182, 43);
+        border-bottom-color: rgb(59, 182, 43);
+    }
 }
 
+/* Keyboard accessibility */
+
+.home-a:focus-visible {
+    outline: 3px solid #75df9b;
+    outline-offset: 6px;
+
+    border-radius: 2px;
+}
 
 /* ========================================
-   TABLETS
+   LARGE DESKTOP SCREENS
+======================================== */
+
+@media (min-width: 1440px) {
+    .home-content {
+        max-width: 1200px;
+    }
+
+    .home-head {
+        max-width: 1050px;
+
+        font-size: clamp(50px, 4vw, 64px);
+    }
+
+    .home-p {
+        max-width: 700px;
+
+        font-size: 1.3rem;
+    }
+}
+
+/* ========================================
+   TABLETS AND SMALL LAPTOPS
    769px - 1024px
 ======================================== */
 
 @media (max-width: 1024px) {
-
     .home {
         min-height: 85vh;
         min-height: 85svh;
     }
-
 
     .home-content {
         max-width: 900px;
@@ -228,39 +257,33 @@
         padding: 35px 25px;
     }
 
-
     .home-head {
         max-width: 800px;
 
         font-size: clamp(2.2rem, 5vw, 42px);
     }
 
-
     .home-p {
         max-width: 550px;
     }
 }
 
-
 /* ========================================
-   TABLETS / SMALL LAPTOPS
-   769px and below
+   TABLETS AND SMALLER SCREENS
+   481px - 768px
 ======================================== */
 
 @media (max-width: 768px) {
-
     .home {
         min-height: 85vh;
         min-height: 85svh;
     }
-
 
     .home-content {
         padding: 30px 20px;
 
         gap: 18px;
     }
-
 
     .home-head {
         max-width: 95%;
@@ -270,7 +293,6 @@
         line-height: 1.15;
     }
 
-
     .home-p {
         max-width: 90%;
 
@@ -279,25 +301,21 @@
         line-height: 1.5;
     }
 
-
     .home-a {
         font-size: 16px;
     }
 }
 
-
 /* ========================================
    MOBILE PHONES
-   480px and below
+   361px - 480px
 ======================================== */
 
 @media (max-width: 480px) {
-
     .home {
         min-height: 80vh;
         min-height: 80svh;
     }
-
 
     .home-content {
         padding: 25px 15px;
@@ -305,21 +323,19 @@
         gap: 16px;
     }
 
-
     .home-head {
         width: 100%;
-
         max-width: 100%;
 
         font-size: clamp(1.8rem, 9vw, 30px);
 
         line-height: 1.15;
-    }
 
+        letter-spacing: -0.4px;
+    }
 
     .home-p {
         width: 100%;
-
         max-width: 100%;
 
         padding: 0 5px;
@@ -329,27 +345,21 @@
         line-height: 1.5;
     }
 
-
     .home-a {
         font-size: 15px;
-
-        padding-bottom: 4px;
     }
 }
 
-
 /* ========================================
    VERY SMALL PHONES
-   360px and below
+   360px AND BELOW
 ======================================== */
 
 @media (max-width: 360px) {
-
     .home {
         min-height: 78vh;
         min-height: 78svh;
     }
-
 
     .home-content {
         padding: 20px 10px;
@@ -357,13 +367,11 @@
         gap: 14px;
     }
 
-
     .home-head {
-        font-size: 25px;
+        font-size: clamp(1.6rem, 8vw, 25px);
 
         line-height: 1.15;
     }
-
 
     .home-p {
         font-size: 14px;
@@ -371,23 +379,20 @@
         line-height: 1.45;
     }
 
-
     .home-a {
         font-size: 14px;
     }
 }
-
 
 /* ========================================
    LANDSCAPE PHONES
 ======================================== */
 
 @media (max-height: 500px) and (orientation: landscape) {
-
     .home {
+        min-height: 100vh;
         min-height: 100svh;
     }
-
 
     .home-content {
         padding: 20px;
@@ -395,13 +400,11 @@
         gap: 12px;
     }
 
-
     .home-head {
         font-size: clamp(1.8rem, 6vw, 32px);
 
         line-height: 1.1;
     }
-
 
     .home-p {
         font-size: 14px;
@@ -411,8 +414,55 @@
         margin-bottom: 5px;
     }
 
-
     .home-a {
         font-size: 14px;
+    }
+}
+
+/* ========================================
+   REDUCED MOTION ACCESSIBILITY
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .home-a {
+        transition: none;
+    }
+
+    .home-a:hover {
+        transform: none;
+    }
+}
+
+/* ========================================
+   FALLBACK FOR OLDER BROWSERS
+======================================== */
+
+@supports not (min-height: 100svh) {
+    .home {
+        min-height: 90vh;
+    }
+
+    @media (max-width: 1024px) {
+        .home {
+            min-height: 85vh;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .home {
+            min-height: 80vh;
+        }
+    }
+
+    @media (max-width: 360px) {
+        .home {
+            min-height: 78vh;
+        }
+    }
+
+    @media (max-height: 500px) and (orientation: landscape) {
+        .home {
+            min-height: 100vh;
+        }
     }
 }
